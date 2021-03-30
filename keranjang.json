@@ -1,0 +1,22 @@
+{
+  "keranjang": [
+    {
+      "id": 1,
+      "nama": "Panasonic FEP405",
+      "harga": 539000,
+      "stok": 10,
+      "qty": 4
+    },
+    {
+      "id": 3,
+      "nama": "Midea FS40-10N",
+      "harga": 249000,
+      "stok": 20,
+      "qty": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
