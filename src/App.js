@@ -6,79 +6,40 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Setrika from "./container/Kipas/Kipas";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Kipas from "./container/Kipas/Kipas";
 import Keranjang from "./container/Kipas/Keranjang";
+import Home from "./component/Kipas/Home";
+import About from "./component/Kipas/About";
 
 function App() {
   return (
     <Router>
       <div>
-
-        <ul className="menu">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">KipasAngin</a>
+        <ul className="navbar-nav ml-auto">
           <li>
-            <Link to="/"><span>Home</span></Link>
+            <Link to="/list-product" className="nav-link">List Produk</Link>
           </li>
           <li>
-            <Link to="/list-product"><span>List Produk</span></Link>
+            <Link to="/keranjang" className="nav-link">Keranjang</Link>
           </li>
           <li>
-            <Link to="/keranjang"><span>Keranjang</span></Link>
-          </li>
-          <li>
-            <Link to="/about"><span>About</span></Link>
+            <Link to="/about" className="nav-link">About</Link>
           </li>
         </ul>
+        </nav>
 
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/list-product">
-            <Products />
-          </Route>
-          <Route path="/keranjang">
-            <Keranjangs />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
+          <Route exact path="/" component={Home}/>
+          <Route path="/list-product" component={Kipas}/>
+          <Route path="/keranjang" component={Keranjang}/>
+          <Route path="/about" component={About}/>
         </Switch>
       </div>
     </Router>
   );
-}
-
-function Home() {
-  return (
-    <div>
-      <center><h2>WELCOME</h2></center>
-    </div>
-  );
-}
-
-const About = () => {
-  return (
-    <div>
-      <center><h2>Biodata</h2></center>
-      
-    </div>
-  );
-}
-
-function Products() {
-  return (
-    <div>
-      <Setrika />
-    </div>
-  )
-}
-
-function Keranjangs() {
-  return (
-    <div>
-      <Keranjang />
-    </div>
-  )
 }
 
 export default App;
