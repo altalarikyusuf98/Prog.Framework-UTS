@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import './Kipas.css';
 import PostKeranjang from "../../component/Kipas/PostKeranjang";
 
 class Kipas extends Component {
@@ -8,7 +7,7 @@ class Kipas extends Component {
     }
 
     ambilDataDariServerAPI = () => {
-        fetch('http://localhost:3003/keranjang')
+        fetch('http://localhost:3002/keranjang')
             .then(response => response.json())
             .then(jsonHasilAmbilDariAPI => {
                 this.setState({
@@ -22,7 +21,7 @@ class Kipas extends Component {
     }
 
     handleTombolSimpan = () => {
-        fetch('http://localhost:3003/keranjang', {
+        fetch('http://localhost:3002/keranjang', {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -39,14 +38,10 @@ class Kipas extends Component {
         var no = 0;
         var total = 0;
         return (
-            <div className="post-kipas">
-                {
-                /* <div className="form pb-2 border-bottom">
-                    <button type="submit" className="btn btn-primary" onClick={this.handleTombolSimpan}>Simpan</button>
-                </div> */}
-                <center><h2>Keranjang</h2></center>
-                <div className="tgh">
-                    <table border="1" cellpadding="5" width="100%">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <h2 className="mt-3">Keranjang</h2>
+                    <table className="table table-bordered mt-3" border="1" cellpadding="5" width="100%">
                         <tr>
                             <th align="center">No</th>
                             <th align="center">ID Produk</th>

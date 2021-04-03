@@ -5,13 +5,34 @@
       "nama": "Panasonic FEP405",
       "harga": 539000,
       "stok": 10,
+      "qty": 5
+    },
+    {
+      "id": 2,
+      "nama": "Midea FS40-7ARB",
+      "harga": 755000,
+      "stok": 10,
       "qty": 4
     },
     {
-      "id": 3,
-      "nama": "Midea FS40-10N",
-      "harga": 249000,
+      "id": 11,
+      "nama": "Panasonic F-ES404",
+      "harga": 653000,
       "stok": 20,
+      "qty": 2
+    },
+    {
+      "id": 10,
+      "nama": "Sekai HSN 2037 RI",
+      "harga": 207000,
+      "stok": 30,
+      "qty": 1
+    },
+    {
+      "id": 12,
+      "nama": "Denpo DF-16NX",
+      "harga": 280000,
+      "stok": 30,
       "qty": 1
     }
   ],

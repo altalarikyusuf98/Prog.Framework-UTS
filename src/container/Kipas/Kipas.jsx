@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import './Kipas.css';
 import Post from "../../component/Kipas/Post";
 
 class Kipas extends Component {
@@ -45,7 +44,7 @@ class Kipas extends Component {
     };
 
     handleCekKeranjang = data => {
-        fetch(`http://localhost:3003/keranjang/${data}`, { method: "GET" }).then(
+        fetch(`http://localhost:3002/keranjang/${data}`, { method: "GET" }).then(
             response => {
                 if (response.ok) {
                     response.json().then(res => {
@@ -60,7 +59,7 @@ class Kipas extends Component {
     };
 
     handleUpdateKeranjang = (data, res) => {
-        fetch(`http://localhost:3003/keranjang/${data}`, {
+        fetch(`http://localhost:3002/keranjang/${data}`, {
             method: "PUT",
             headers: {
                 Accept: "application/json",
@@ -77,7 +76,7 @@ class Kipas extends Component {
     };
 
     handleTombolSimpan = () => {
-        fetch('http://localhost:3003/keranjang', {
+        fetch('http://localhost:3002/keranjang', {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -92,13 +91,9 @@ class Kipas extends Component {
 
     render() {
         return (
-            <div className="post-kipas">
-                {
-                /* <div className="form pb-2 border-bottom">
-                    <button type="submit" className="btn btn-primary" onClick={this.handleTombolSimpan}>Simpan</button>
-                </div> */}
-                <center><h2>Daftar Barang</h2></center>
-                <div className="tgh">
+            <div className="container post-mahasiswa mt-3 mb-3">
+                <h2 className="text-center">Daftar Kipas</h2>
+                <div className="row justify-content-center">
                     {
                         this.state.listKipas.map(kipas => {
                             return (
